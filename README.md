@@ -1,5 +1,4 @@
 # AWS Bastion Instance
-=============================
 
 This module can be used to deploy an AWS ec2 instance as a bastion server.
 
