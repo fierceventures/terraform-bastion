@@ -18,6 +18,16 @@ Usage
 -----
 
 ```hcl
+module "bastion" {
+  source = "github.com/fierceventures/terraform-bastion"
+  vpc_id = "${module.vpc.id}"
+  subnet_id = "${module.public_subnet.id}"
+  key_name = "${aws_key_pair.key_pair.key_name}"
+  env = "test"
+  name = "bastion"
+  instance_type = "t2.micro"
+  ami = "ami-1a668878"
+}
 ```
 
 Outputs
